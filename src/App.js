@@ -1,12 +1,14 @@
 import React from 'react';
 import { StreamApp, NotificationDropdown, FlatFeed, LikeButton, Activity, CommentList, CommentField, StatusUpdateForm } from 'react-activity-feed';
-import 'react-activity-feed/dist/index.css';
+ import 'react-activity-feed/dist/index.css';
+require("dotenv").config();
+let stream = require('getstream');
 
-var stream = require('getstream');
+// var stream = require('getstream');
 // Instantiate a new client (server side)
-client = stream.connect('f29vfyjscd65', 'a2khjzqaxnudajj8xk89j5cqq6h5vrg9su3wkn72zxg4umcv8w97f2scvj9da9w8', '56218');
+// client = stream.connect('f29vfyjscd65', 'a2khjzqaxnudajj8xk89j5cqq6h5vrg9su3wkn72zxg4umcv8w97f2scvj9da9w8', '56218');
 // Instantiate a new client (client side)
-client = stream.connect('f29vfyjscd65', null, '56218');
+// client = stream.connect('f29vfyjscd65', null, '56218');
 
 class App extends React.Component {
   render () {
