@@ -1,27 +1,19 @@
 import React from 'react';
 import { StreamApp, NotificationDropdown, FlatFeed, LikeButton, Activity, CommentList, CommentField, StatusUpdateForm } from 'react-activity-feed';
- import 'react-activity-feed/dist/index.css';
-require("dotenv").config();
-let stream = require('getstream');
-
-// var stream = require('getstream');
-// Instantiate a new client (server side)
-// client = stream.connect('f29vfyjscd65', 'a2khjzqaxnudajj8xk89j5cqq6h5vrg9su3wkn72zxg4umcv8w97f2scvj9da9w8', '56218');
-// Instantiate a new client (client side)
-// client = stream.connect('f29vfyjscd65', null, '56218');
+import 'react-activity-feed/dist/index.css';
 
 class App extends React.Component {
   render () {
     return (
       <StreamApp
-        apiKey="f29vfyjscd65"
-        appId="56218"
-        token="a2khjzqaxnudajj8xk89j5cqq6h5vrg9su3wkn72zxg4umcv8w97f2scvj9da9w8"
+        apiKey="47e2kfre9umh"
+        appId="56830"
+        token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlci1vbmUifQ.OYdNF_ORut8A613f8OSuzff6pOchPrnKpN89MjW0ccE"
       >
         <NotificationDropdown notify />
         <StatusUpdateForm
           feedGroup="timeline"
-          userId="fe7a765e-6665-4121-9760-e6ec5193b243" />
+          userId="user-one" />
         <FlatFeed
           options={ {reactions: { recent: true } } }
           notify
