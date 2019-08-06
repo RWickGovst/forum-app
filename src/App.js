@@ -2,13 +2,19 @@ import React from 'react';
 import { StreamApp, NotificationDropdown, FlatFeed, LikeButton, Activity, CommentList, CommentField, StatusUpdateForm } from 'react-activity-feed';
 import 'react-activity-feed/dist/index.css';
 
+require("dotenv").config();
+var keys = require("./keys.js");
+
 class App extends React.Component {
   render () {
+    let streamKey = process.env.StreamKey || keys.stream.key;
+    let appID = process.env.ProjectID || keys.stream.id;
+    let streamSecret = process.env.StreamSecret || keys.stream.secret;
     return (
       <StreamApp
-        apiKey="47e2kfre9umh"
-        appId="56830"
-        token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlci1vbmUifQ.OYdNF_ORut8A613f8OSuzff6pOchPrnKpN89MjW0ccE"
+        apiKey={streamKey}
+        appId={appID}
+        token={streamSecret}
       >
         <NotificationDropdown notify />
         <StatusUpdateForm
