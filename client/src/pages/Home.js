@@ -34,22 +34,17 @@ class Home extends Component {
         console.log(this.state);
 
         return (
-            <div>
+<div>
                 <HelloBootstrap />
-                <Row>
+<Row>
     <Col><TopicMenu /></Col>
     <Col xs={6}>2 of 3</Col>
     <Col>3 of 3</Col>
-  </Row>
+</Row>
                  
-                    
-
-                </div>
                 <Footer />
         
-
-        
-            </div>
+ </div>
 
         )
     }
