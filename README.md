@@ -1,2 +1,2 @@
-# forum-app
-A social media framework
+# practice-react-app
+practice
