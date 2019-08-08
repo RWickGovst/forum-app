@@ -6,6 +6,8 @@ import API from '../services/API';
 
 // any components you want to display
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
+//added this line 
+import Footer from '../components/Footer/Footer';
 
 
 class Home extends Component {
@@ -47,8 +49,9 @@ class Home extends Component {
                     {this.state.message}
 
                 </div>
+                <Footer />
         
-        </div>
+            </div>
         )
     }
 }
