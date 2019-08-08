@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //pages for router
 // import Delete from './pages/Delete';

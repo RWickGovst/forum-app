@@ -1,13 +1,19 @@
 // dependencies
 import React, { Component } from 'react';
-
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 //import API
+// eslint-disable-next-line
 import API from '../services/API';
 
 // any components you want to display
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
+
+import TopicMenu from '../components/TopicMenu/TopicMenu';
+
 //added this line 
 import Footer from '../components/Footer/Footer';
+
 
 
 class Home extends Component {
@@ -24,34 +30,27 @@ class Home extends Component {
         });
     };
 
-    // getBookById = () => {
-    //     //do the api call by id
-    //     API.findAll()
-    //         .then(res => {
-    //             this.setState({
-    //                 books: res.data 
-    //             })
-    //         })
-    //         .catch(err => {
-    //             this.setState({
-    //                 message: err
-    //             })
-    //         })
-    // };
-
     render(){
         console.log(this.state);
 
         return (
             <div>
                 <HelloBootstrap />
-                <div>
-                    {this.state.message}
+                <Row>
+    <Col><TopicMenu /></Col>
+    <Col xs={6}>2 of 3</Col>
+    <Col>3 of 3</Col>
+  </Row>
+                 
+                    
 
                 </div>
                 <Footer />
         
+
+        
             </div>
+
         )
     }
 }

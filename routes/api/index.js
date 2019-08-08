@@ -3,14 +3,15 @@ const router = require ('express').Router();
 const path = require('path');
 
 // file imports
-const bookRoutes = require('./books.js')
-// const anotherThingRoutes = require('./anotherThing.js')
+const userRoutes = require('./users.js')
+// const postRoutes = require('./post.js')
 
 // routes
 // this is /api/books
-router.use('/books', bookRoutes);
+router.use('/users', userRoutes);
+
 // this is /api/anotherThing
-// router.use('/anotherThing', anotherThingRoutes);
+// router.use('/post', postRoutes);
 
 // any other route send them to build index.html
 // router.use((req, res) => {
