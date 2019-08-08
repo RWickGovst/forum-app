@@ -9,6 +9,7 @@ import API from '../services/API';
 // any components you want to display
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
 import TopicMenu from '../components/TopicMenu/TopicMenu';
+import CurrentUsers from '../components/CurrentUsers/CurrentUsers';
 
 class Home extends Component {
     state = {
@@ -33,7 +34,7 @@ class Home extends Component {
                 <Row>
     <Col><TopicMenu /></Col>
     <Col xs={6}>2 of 3</Col>
-    <Col>3 of 3</Col>
+    <Col><CurrentUsers /></Col>
   </Row>
                  
                     
