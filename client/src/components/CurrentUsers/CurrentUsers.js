@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
 
 import './style.css';
 
@@ -17,7 +18,14 @@ function CurrentUsers() {
       UserTwo < br />
       UserThree < br />
     </Card.Text>
-    <Button variant="primary">Chat</Button>
+    <InputGroup>
+    <InputGroup.Prepend>
+      <InputGroup.Text>Chat</InputGroup.Text>
+    </InputGroup.Prepend>
+    <FormControl as="textarea" aria-label="With textarea" />
+  </InputGroup>
+    
+    {/* <Button variant="primary">Chat</Button> */}
   </Card.Body>
 </Card>
 
