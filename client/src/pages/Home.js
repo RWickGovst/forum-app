@@ -8,7 +8,7 @@ import API from '../services/API';
 
 // any components you want to display
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
-
+import CurrentUsers from '../components/CurrentUsers/CurrentUsers';
 import TopicMenu from '../components/TopicMenu/TopicMenu';
 
 //added this line 
@@ -39,7 +39,7 @@ class Home extends Component {
 <Row>
     <Col><TopicMenu /></Col>
     <Col xs={6}>2 of 3</Col>
-    <Col>3 of 3</Col>
+    <Col><CurrentUsers /></Col>
 </Row>
                  
                 <Footer />
