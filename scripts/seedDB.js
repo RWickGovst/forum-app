@@ -4,55 +4,34 @@ const mongoose = require('mongoose');
 // file imports
 const db = require('../models');
 
-const DBNAME = 'practice-react-app'
+const DBNAME = 'forumApp'
 
 // connect to mongo db
 mongoose.connect(
-    process.env.MONGODB_URI || `mongodb://localhost/${DBNAME}`
+    process.env.MONGODB_URI || `mongodb://localhost/${DBNAME}`, {
+      useCreateIndex: true,
+      useNewUrlParser: true
+  }
 );
 
 // dummy data
-const bookSeed = [
+const userSeed =
     {
-        title: "The Dead Zone",
-        author: "Stephen King"
-      },
-      {
-        title: "Lord of the Flies",
-        author: "William Golding"
-      },
-      {
-        title: "The Catcher in the Rye",
-        author: "J.D. Salinger"
-      },
-      {
-        title: "The Punch Escrow",
-        author: "Tal M. Klein"
-      },
-      {
-        title: "Harry Potter and the Sorcerer's Stone",
-        author: "J.K. Rowling",
-      }
-]
+        name: "Steve Holt",
+        password: "password",
+        userName: "s_holt",
+        userEmail: "sholt@gmail.com",
+        // picture: "/pic.jpg",
+    }
 
-db.Book
+db.User
     .remove({}) // drop table if exists
           .then(() => {
-            db.Book.collection.insertMany(bookSeed)
-          }).then(bookDataInserted => {
-            console.log(`$ {bookDataInserted.result.n}
-              records inserted`)
+            db.User.create({userSeed})
+          }).then(userDataInserted => {
+            console.log('success')
             process.exit(0);
           }).catch(err => {
             console.log(err);
             process.exit(1);
           })
-
-
-
-
-
-
-
-
-

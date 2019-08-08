@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
 // add routes, API and view
 app.use(routes);
 
-const DBNAME = 'practice-react-app'
+const DBNAME = 'forumApp'
 
 mongoose.connect(
     process.env.MONGODB_URI || `mongodb://localhost/${DBNAME}`, {
