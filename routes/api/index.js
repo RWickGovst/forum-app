@@ -13,9 +13,9 @@ router.use('/books', bookRoutes);
 // router.use('/anotherThing', anotherThingRoutes);
 
 // any other route send them to build index.html
-router.use((req, res) => {
-    res.sendFile(path.join(__dirname, '../../client/build/index.html'))
-});
+// router.use((req, res) => {
+//     res.sendFile(path.join(__dirname, '../../client/build/index.html'))
+// });
 
 // export it
 module.exports = router;

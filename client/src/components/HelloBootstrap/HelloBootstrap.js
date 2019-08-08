@@ -5,6 +5,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 
+import './style.css';
+
 function HelloBootstrap() {
   return (
 
@@ -26,6 +28,8 @@ function HelloBootstrap() {
   
 
 </div>
+  
+
   )}
       
   
