@@ -39,7 +39,7 @@ class Home extends Component {
 <Row>
     <Col><TopicMenu /></Col>
     <Col xs={6}>2 of 3</Col>
-    <Col>3 of 3</Col>
+    <Col><CurrentUsers /></Col>
 </Row>
                  
                 <Footer />
