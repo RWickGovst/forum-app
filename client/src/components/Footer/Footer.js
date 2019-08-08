@@ -10,11 +10,11 @@ function Footer() {
     <blockquote className="blockquote mb-0">
       <p>
         {' '}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-        erat a ante.{' '}
+        You're gonna eat lightnin' and you're gonna crap thunder!
+ {' '}
       </p>
       <footer className="blockquote-footer">
-        Someone famous in <cite title="Source Title">Source Title</cite>
+        Mickey <cite title="Source Title">From Rocky</cite>
       </footer>
     </blockquote>
   </Card.Body>
