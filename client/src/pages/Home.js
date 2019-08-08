@@ -8,7 +8,13 @@ import API from '../services/API';
 
 // any components you want to display
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
+
 import TopicMenu from '../components/TopicMenu/TopicMenu';
+
+//added this line 
+import Footer from '../components/Footer/Footer';
+
+
 
 class Home extends Component {
     state = {
@@ -39,8 +45,12 @@ class Home extends Component {
                     
 
                 </div>
+                <Footer />
         
+
         
+            </div>
+
         )
     }
 }
