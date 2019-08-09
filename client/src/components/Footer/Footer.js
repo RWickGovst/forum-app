@@ -4,6 +4,7 @@ import './style.css';
 
 function Footer() {
     return (
+      <div className="container">
         <Card bg="dark" text="white" sticky="bottom">
   <Card.Header>Quote</Card.Header>
   <Card.Body>
@@ -19,6 +20,7 @@ function Footer() {
     </blockquote>
   </Card.Body>
 </Card>
+</div>
     )
 }
 export default Footer;

@@ -35,7 +35,7 @@ class Home extends Component {
         console.log(this.state);
 
         return (
-<div>
+<div className="container">
                 <HelloBootstrap />
 <Row>
     <Col><TopicMenu /></Col>
