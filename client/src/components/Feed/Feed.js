@@ -3,17 +3,16 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import './style.css';
 
-function Feed() {
+function Feed(props) {
     return (
         <Card style={{ width: '100%'}}>
-  <Card.Img variant="top" src="https://www.example.com/foo.jpg" />
+  <Card.Img variant="top" {...props.img} />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>{props.title}</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      {props.summary}
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button variant="primary"><a target="_blank" href={props.link}>Check It out</a></Button>
   </Card.Body>
 </Card>
     )};
