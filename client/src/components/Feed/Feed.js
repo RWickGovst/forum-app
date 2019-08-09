@@ -6,7 +6,7 @@ import './style.css';
 function Feed() {
     return (
         <Card style={{ width: '100%'}}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+  <Card.Img variant="top" src="https://www.example.com/foo.jpg" />
   <Card.Body>
     <Card.Title>Card Title</Card.Title>
     <Card.Text>
