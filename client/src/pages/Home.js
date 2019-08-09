@@ -52,7 +52,9 @@ class Home extends Component {
     <HelloBootstrap />
 <Row>
     <Col xs={2}>
-        <button onClick={() => this.scrapeCategory()}>Scrape Technology</button>
+        <button onClick={() => this.scrapeCategory()}>Technology</button>
+        <button onClick={() => this.scrapeCategory()}>Business</button>
+        <button onClick={() => this.scrapeCategory()}>Politics</button>
     </Col>
     {/* <Col xs={2}><TopicMenu scrape={(category) => this.scrapeCategory}/></Col> */}
     <Col xs={6}>
