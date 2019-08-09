@@ -1,1 +1,4 @@
 /* Any styling for this specific component */
+* {
+    margin-top: 2px;
+}
