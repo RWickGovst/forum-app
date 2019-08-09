@@ -10,6 +10,7 @@ import API from '../services/API';
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
 import CurrentUsers from '../components/CurrentUsers/CurrentUsers';
 import TopicMenu from '../components/TopicMenu/TopicMenu';
+import Feed from '../components/Feed/Feed';
 
 //added this line 
 import Footer from '../components/Footer/Footer';
@@ -38,7 +39,7 @@ class Home extends Component {
                 <HelloBootstrap />
 <Row>
     <Col><TopicMenu /></Col>
-    <Col xs={6}>2 of 3</Col>
+    <Col xs={6}><Feed /></Col>
     <Col><CurrentUsers /></Col>
 </Row>
                  

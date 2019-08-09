@@ -21,7 +21,7 @@ function TopicMenu() {
     >
       <Dropdown.Item href="#">Business</Dropdown.Item>
       <Dropdown.Item href="#">Politics</Dropdown.Item>
-      <Dropdown.Item href="#">Children</Dropdown.Item>
+      <Dropdown.Item href="#">Technology</Dropdown.Item>
       <Dropdown.Divider />
       <Dropdown.Item href="#">Suggest a Topic</Dropdown.Item>
     </DropdownButton>
