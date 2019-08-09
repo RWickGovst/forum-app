@@ -24,6 +24,9 @@ function TopicMenu() {
     <Button variant="primary" size="lg" onClick={props.scrape(value)}>
       Political
     </Button>
+    <Button variant="primary" size="lg" onClick={props.scrape(value)}>
+      Political
+    </Button>
   </ButtonToolbar>
     {/* <DropdownButton
       as={InputGroup.Prepend}
