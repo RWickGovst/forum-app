@@ -12,6 +12,7 @@ function Feed(props) {
     <Card.Text>
       {props.summary}
     </Card.Text>
+    {/* eslint-disable-next-line */}
     <Button variant="primary"><a target="_blank" href={props.link}>Check It out</a></Button>
   </Card.Body>
 </Card>

@@ -21,8 +21,8 @@ function TopicMenu() {
     <Button variant="primary" size="lg" onClick={props.scrape(value)}>
       Technology
     </Button>
-    <Button variant="secondary" size="lg">
-      Large button
+    <Button variant="primary" size="lg" onClick={props.scrape(value)}>
+      Political
     </Button>
   </ButtonToolbar>
     {/* <DropdownButton
