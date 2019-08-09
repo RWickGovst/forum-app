@@ -8,10 +8,13 @@ import API from '../services/API';
 
 // any components you want to display
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
+import CurrentUsers from '../components/CurrentUsers/CurrentUsers';
+import TopicMenu from '../components/TopicMenu/TopicMenu';
+
 //added this line 
 import Footer from '../components/Footer/Footer';
 
-import TopicMenu from '../components/TopicMenu/TopicMenu';
+
 
 class Home extends Component {
     state = {
