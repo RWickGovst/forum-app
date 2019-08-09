@@ -38,7 +38,7 @@ class Home extends Component {
 <div className="container">
                 <HelloBootstrap />
 <Row>
-    <Col><TopicMenu /></Col>
+    <Col xs={2}><TopicMenu /></Col>
     <Col xs={6}><Feed /></Col>
     <Col><CurrentUsers /></Col>
 </Row>
