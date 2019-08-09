@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 //import API
 // eslint-disable-next-line
 import API from '../services/API';
-
+import Button from "react-bootstrap/Button";
 // any components you want to display
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
 import CurrentUsers from '../components/CurrentUsers/CurrentUsers';
@@ -52,9 +52,9 @@ class Home extends Component {
     <HelloBootstrap />
 <Row>
     <Col xs={2}>
-        <button onClick={() => this.scrapeCategory()}>Technology</button>
-        <button onClick={() => this.scrapeCategory()}>Business</button>
-        <button onClick={() => this.scrapeCategory()}>Politics</button>
+    <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Business</Button>
+    <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Technology</Button>
+    <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Politics</Button>
     </Col>
     {/* <Col xs={2}><TopicMenu scrape={(category) => this.scrapeCategory}/></Col> */}
     <Col xs={6}>
