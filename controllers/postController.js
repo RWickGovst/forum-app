@@ -1,5 +1,5 @@
 // dependencies
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
@@ -19,7 +19,7 @@ module.exports = {
         result.img = $(this).find(".c-picture").find("img").attr("320w");
         result.title = $(this).find("h2.c-entry-box--compact__title").children("a").text();
         result.link = $(this).find("a").attr("href");
-        result.summary = $(this).find("h2.c-entry-box--compact__title").children("a").text();
+        // result.summary = $(this).find("h2.c-entry-box--compact__title").children("a").text();
         result.saved = false;
         
         console.log(result.img);
@@ -31,34 +31,37 @@ module.exports = {
       res.json(data);
     });
     },
-
-    findAll: (req, res) => {
-        db.Book.find({
-
-        }).then(dbBooks => {
-            res.send('Find all was hit')
-        }).catch(err => {
-            res.err(err)
-        })
-        
-    },
-    findById: (req, res) => {
-        db.Book.findOne({
-            id: req.params.id
-        }).then(singleBook => {
-
-        }).catch(err => {
-            res.err(err)
-        })
-        res.send('Find by ID was hit')
-    },
-    addBook: (req, res) => {
-        res.send('Add book was hit')
-    },
-    updateBook: (req, res) => {
-        res.send('Update book was hit')
-    },
-    deleteById: (req, res) => {
-        res.send('Delete was hit')
+    createPost: function(req, res){
+      db.Post.create(req.body).then(dbPost => res.json(dbPost)).catch(err => res.status(422).json(err));
     }
 }
+    // findAll: (req, res) => {
+    //     db.Book.find({
+
+    //     }).then(dbBooks => {
+    //         res.send('Find all was hit')
+    //     }).catch(err => {
+    //         res.err(err)
+    //     })
+        
+    // },
+//     findById: (req, res) => {
+//         db.Book.findOne({
+//             id: req.params.id
+//         }).then(singleBook => {
+
+//         }).catch(err => {
+//             res.err(err)
+//         })
+//         res.send('Find by ID was hit')
+//     },
+//     addBook: (req, res) => {
+//         res.send('Add book was hit')
+//     },
+//     updateBook: (req, res) => {
+//         res.send('Update book was hit')
+//     },
+//     deleteById: (req, res) => {
+//         res.send('Delete was hit')
+//     }
+// }

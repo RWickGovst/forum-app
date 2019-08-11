@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 //import API
 // eslint-disable-next-line
-import API from '../services/API';
+// import API from '../services/API';
 import Button from "react-bootstrap/Button";
 // any components you want to display
 import HelloBootstrap from '../components/HelloBootstrap/HelloBootstrap';
@@ -12,13 +12,21 @@ import CurrentUsers from '../components/CurrentUsers/CurrentUsers';
 // import TopicMenu from '../components/TopicMenu/TopicMenu';
 import Feed from '../components/Feed/Feed';
 import Footer from '../components/Footer/Footer';
+import API from "../utils/API"
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
 
 class Home extends Component {
     state = {
         books: [],
         posts: [],
-        message: ''
+        message: '',
+        postInfo: ""
     };
+    createPost = () => {
+        API.createPost(this.state.postInfo).then(res=> console.log(res)).catch( (err) => console.log(err))
+    }
+
 
     componentDidMount = () => {
         //what happens when we load
@@ -43,6 +51,16 @@ class Home extends Component {
                 console.log(err)
             })
     }
+    handleInputChange =event => {
+        const {name, value} =event.target;
+        this.setState({
+            [name]: value
+        })
+    }
+    handleFormSubmit = event => {
+        event.preventDefault();
+        this.createPost();
+    }
 
     render(){
         console.log(this.state);
@@ -55,9 +73,18 @@ class Home extends Component {
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Business</Button>
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Technology</Button>
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Politics</Button>
+    
     </Col>
     {/* <Col xs={2}><TopicMenu scrape={(category) => this.scrapeCategory}/></Col> */}
     <Col xs={6}>
+    {/* <Button variant="primary" size="lg" onClick={() => this.createPost()}>Create a Post</Button> */}
+    <InputGroup>
+    <InputGroup.Prepend>
+      <InputGroup.Text>With textarea</InputGroup.Text>
+    </InputGroup.Prepend>
+    <FormControl as="textarea" aria-label="With textarea" handleInputChange = {this.handleInputChange}
+    handleFormSubmit ={this.handleFormSubmit}/>
+  </InputGroup>
         {this.state.posts ? (
             this.state.posts.map((singlePost, i) => (
                 <Feed key={i} img={singlePost.img} title={singlePost.title} summary={singlePost.summary} link={singlePost.link} />

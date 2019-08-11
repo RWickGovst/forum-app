@@ -14,7 +14,7 @@ function TopicMenu() {
 <div className="container">
 
 
-<InputGroup className="mb-3">
+{/* <InputGroup className="mb-3">
 
 
   <ButtonToolbar>
@@ -30,7 +30,7 @@ function TopicMenu() {
       Business
     </Button>
     < /br>
-  </ButtonToolbar>
+  </ButtonToolbar> */}
     {/* <DropdownButton
       as={InputGroup.Prepend}
       variant="outline-secondary"
@@ -44,7 +44,7 @@ function TopicMenu() {
       <Dropdown.Item href="#">Suggest a Topic</Dropdown.Item>
     </DropdownButton> */}
     {/* <FormControl aria-describedby="basic-addon1" /> */}
-  </InputGroup>
+  {/* </InputGroup> */}
 
   </div>
 
