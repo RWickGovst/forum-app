@@ -14,37 +14,7 @@ function TopicMenu() {
 <div className="container">
 
 
-{/* <InputGroup className="mb-3">
-
-
-  <ButtonToolbar>
-    <Button variant="primary" size="lg" onClick={props.scrape(value)}>
-      Technology
-    </Button>
-    < /br>
-    <Button variant="primary" size="lg" onClick={props.scrape(value)}>
-      Political
-    </Button>
-    < /br>
-    <Button variant="primary" size="lg" onClick={props.scrape(value)}>
-      Business
-    </Button>
-    < /br>
-  </ButtonToolbar> */}
-    {/* <DropdownButton
-      as={InputGroup.Prepend}
-      variant="outline-secondary"
-      title="Dropdown"
-      id="input-group-dropdown-1"
-    >
-      <Dropdown.Item href="#">Business</Dropdown.Item>
-      <Dropdown.Item href="#">Politics</Dropdown.Item>
-      <Dropdown.Item href="#">Technology</Dropdown.Item>
-      <Dropdown.Divider />
-      <Dropdown.Item href="#">Suggest a Topic</Dropdown.Item>
-    </DropdownButton> */}
-    {/* <FormControl aria-describedby="basic-addon1" /> */}
-  {/* </InputGroup> */}
+{
 
   </div>
 
