@@ -14,17 +14,23 @@ function TopicMenu() {
 <div className="container">
 
 
-{/* <InputGroup className="mb-3"> */}
+{/* <InputGroup className="mb-3">
 
 
   <ButtonToolbar>
     <Button variant="primary" size="lg" onClick={props.scrape(value)}>
       Technology
     </Button>
-    <Button variant="secondary" size="lg">
-      Large button
+    < /br>
+    <Button variant="primary" size="lg" onClick={props.scrape(value)}>
+      Political
     </Button>
-  </ButtonToolbar>
+    < /br>
+    <Button variant="primary" size="lg" onClick={props.scrape(value)}>
+      Business
+    </Button>
+    < /br>
+  </ButtonToolbar> */}
     {/* <DropdownButton
       as={InputGroup.Prepend}
       variant="outline-secondary"
