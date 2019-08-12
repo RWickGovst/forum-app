@@ -15,6 +15,7 @@ import Footer from '../components/Footer/Footer';
 import API from "../utils/API"
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
+import Image from 'react-bootstrap/Image';
 // import router from '../../routes/api/post';
 
 class Home extends Component {
@@ -79,8 +80,12 @@ class Home extends Component {
     <Col xs={6}>
     {/* <Button variant="primary" size="lg" onClick={() => this.createPost()}>Create a Post</Button> */}
     <InputGroup>
+    
     <InputGroup.Prepend>
-      <InputGroup.Text>With textarea</InputGroup.Text>
+    <Col xs={6} md={4}>
+      <Image src="holder.js/171x180" roundedCircle />
+    </Col>
+      <InputGroup.Text>Create a Post</InputGroup.Text>
     </InputGroup.Prepend>
     <FormControl as="textarea" aria-label="With textarea" handleInputChange = {this.handleInputChange}
     handleFormSubmit ={this.handleFormSubmit}/>
