@@ -36,6 +36,7 @@ class Home extends Component {
         });
     };
 
+    //
     scrapeCategory = () => {
         console.log(`this.scrape category hit`)
         API.scrapeCategory("technology")
@@ -49,6 +50,7 @@ class Home extends Component {
                 console.log(err)
             })
     }
+    
     handleInputChange =event => {
         const {name, value} =event.target;
         this.setState({
