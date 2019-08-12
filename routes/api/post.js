@@ -10,15 +10,4 @@ router.route('/technology')
 router.route("/")
 .post(postControllers.createPost);
 
-// matches with /api/
-// router.route('/')
-    // .get(booksController.findAll);
-
-// matches with /api/books/:id
-// router.route('/:id')
-    // .get(booksController.findById)
-    // .post(booksController.addBook)
-    // .put(booksController.updateBook)
-    // .delete(booksController.deleteById);
-
 module.exports = router;

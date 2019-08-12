@@ -15,6 +15,7 @@ import Footer from '../components/Footer/Footer';
 import API from "../utils/API"
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
+// import router from '../../routes/api/post';
 
 class Home extends Component {
     state = {
@@ -29,10 +30,7 @@ class Home extends Component {
 
 
     componentDidMount = () => {
-        //what happens when we load
-        // console.log(`component did mount started`)
-        // this.scrapeCategory();
-        // console.log(`component did mount launched scrape`)
+       
         this.setState({
             message: 'Component Loaded'
         });
