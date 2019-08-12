@@ -35,33 +35,4 @@ module.exports = {
       db.Post.create(req.body).then(dbPost => res.json(dbPost)).catch(err => res.status(422).json(err));
     }
 }
-    // findAll: (req, res) => {
-    //     db.Book.find({
-
-    //     }).then(dbBooks => {
-    //         res.send('Find all was hit')
-    //     }).catch(err => {
-    //         res.err(err)
-    //     })
-        
-    // },
-//     findById: (req, res) => {
-//         db.Book.findOne({
-//             id: req.params.id
-//         }).then(singleBook => {
-
-//         }).catch(err => {
-//             res.err(err)
-//         })
-//         res.send('Find by ID was hit')
-//     },
-//     addBook: (req, res) => {
-//         res.send('Add book was hit')
-//     },
-//     updateBook: (req, res) => {
-//         res.send('Update book was hit')
-//     },
-//     deleteById: (req, res) => {
-//         res.send('Delete was hit')
-//     }
-// }
+    
