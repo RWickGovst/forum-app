@@ -1,22 +1,15 @@
 import axios from "axios";
 
-export default{
+export default {
+    //this route saves to the DB
     createPost: function(postData){
         return axios.post("/api/post", postData);
+    },
+    // //does the scraping
+    scrapeCategory: function(scrapeData){
+        return axios.get("/api/post/technology", scrapeData);
     }
+
 }
 
 
-// dependencies
-// const router = require('express').Router();
-// const postControllers = require("../../controllers/postController");
-
-// file imports
-// const postController = require('../../controllers/postController');
-
-// router.route('/technology')
-//     .get(postController.newTechnology);
-// router.route("/")
-// .post(postControllers.createPost);
-
-// module.exports = router;
