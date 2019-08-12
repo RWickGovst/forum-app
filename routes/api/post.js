@@ -7,6 +7,10 @@ const postController = require('../../controllers/postController');
 router.route('/technology')
     .get(postController.newTechnology);
 
+//politics, nyt gotta find//did this
+// router.route('/politics')
+//     .get(postController.newPolitics);
+
 // matches with /api/
 // router.route('/')
     // .get(booksController.findAll);

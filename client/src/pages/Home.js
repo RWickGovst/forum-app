@@ -30,9 +30,25 @@ class Home extends Component {
         });
     };
 
+    // scrapeCategory = () => {
+    //     console.log(`this.scrape category hit`)
+    //     API.scrapeCategory("technology")
+    //     // API.scrapeCategory("politics")
+    //         .then(dataScraped => {
+    //             console.log(dataScraped);
+    //             this.setState({
+    //                 posts: dataScraped.data
+    //             });
+    //         })
+    //         .catch(err => {
+    //             console.log(err)
+    //         })
+    // }
+
     scrapeCategory = () => {
         console.log(`this.scrape category hit`)
         API.scrapeCategory("technology")
+        // API.scrapeCategory("politics")
             .then(dataScraped => {
                 console.log(dataScraped);
                 this.setState({
@@ -44,6 +60,8 @@ class Home extends Component {
             })
     }
 
+   
+
     render(){
         console.log(this.state);
 
@@ -53,6 +71,7 @@ class Home extends Component {
 <Row>
     <Col xs={2}>
         <button onClick={() => this.scrapeCategory()}>Scrape Technology</button>
+        {/* <button onClick={() => this.scrapeCategory()}>Scrape Politics</button> */}
     </Col>
     {/* <Col xs={2}><TopicMenu scrape={(category) => this.scrapeCategory}/></Col> */}
     <Col xs={6}>

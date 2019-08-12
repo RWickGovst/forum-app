@@ -12,7 +12,7 @@ function Feed(props) {
     <Card.Text>
       {props.summary}
     </Card.Text>
-    <Button variant="primary"><a target="_blank" href={props.link}>Check It out</a></Button>
+    <Button variant="primary"><a target="blank" href={props.link}>Check It out</a></Button>
   </Card.Body>
 </Card>
     )};

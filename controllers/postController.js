@@ -8,6 +8,9 @@ const db = require('../models');
 
 module.exports = {
 
+//tecnology, reveiews, science, creators, entertainment, video, archives
+//theres a way to cycle through an object to grab the value
+
     newTechnology: (req, res) => {
         axios.get("https://www.theverge.com/").then(function(response) {
       var $ = cheerio.load(response.data);
@@ -31,6 +34,29 @@ module.exports = {
       res.json(data);
     });
     },
+
+    // newPolitics: (req, res) => {
+    //     axios.get("https://www.nytimes.com/section/politics").then(function(response) {
+    //         var $ = cheerio.load(response.data);
+    //         console.log(response);
+    //         // var data = []
+    //         $("div.css-8age7h ekkqrpp0");
+            // // // result.img = $(this).find("figure class="photo css-1dv1kvn");
+            // result.title = $(this).find("css-12vidh e4e4511");
+            // // // result.link = $(this).find("data-rref href="/2019/08/11/us/politics/kamala-harris)
+            // // // result.summary = $(this).find()
+            // // result.saved = false;
+
+            // // console.log('The article title is: ' + result.title);
+
+            // data.push(result)
+            // console.log(response);
+
+    //     });
+    //     res.json(data);
+    
+    // },
+
 
     findAll: (req, res) => {
         db.Book.find({

@@ -8,5 +8,6 @@ export default {
     scrapeCategory: function(category) {
         console.log(`api scrape hit`);
         return axios.get('/api/post/' + category)
+        
     }
 }
