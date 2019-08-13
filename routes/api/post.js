@@ -1,5 +1,6 @@
 // dependencies
 const router = require('express').Router();
+const postControllers = require("../../controllers/postController");
 
 // file imports
 const postController = require('../../controllers/postController');
@@ -21,5 +22,7 @@ router.route('/technology')
     // .post(booksController.addBook)
     // .put(booksController.updateBook)
     // .delete(booksController.deleteById);
+router.route("/")
+.post(postControllers.createPost);
 
 module.exports = router;

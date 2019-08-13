@@ -1,0 +1,8 @@
+.card-body {
+    background-color: silver;
+    /* opacity: .5; */
+    color: black;
+}
+.btn-primary {
+    color: white;
+}
