@@ -18,6 +18,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Image from 'react-bootstrap/Image';
 // import router from '../../routes/api/post';
 
+
 class Home extends Component {
     state = {
         books: [],
@@ -26,6 +27,7 @@ class Home extends Component {
         postInfo: ""
     };
     createPost = () => {
+        console.log("inside the create post function")
         API.createPost(this.state.postInfo).then(res=> console.log(res)).catch( (err) => console.log(err))
     }
 
@@ -74,21 +76,26 @@ class Home extends Component {
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Business</Button>
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Technology</Button>
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Politics</Button>
+    <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Add a Topic</Button>
     
     </Col>
     {/* <Col xs={2}><TopicMenu scrape={(category) => this.scrapeCategory}/></Col> */}
     <Col xs={6}>
-    {/* <Button variant="primary" size="lg" onClick={() => this.createPost()}>Create a Post</Button> */}
+    
     <InputGroup>
     
     <InputGroup.Prepend>
     <Col xs={6} md={4}>
-      <Image src="holder.js/171x180" roundedCircle />
+      <Image src="./favicon.ico" roundedCircle />
     </Col>
-      <InputGroup.Text>Create a Post</InputGroup.Text>
+    <Button variant="primary" size="lg" onClick={() => this.createPost()}>Create a Post</Button>
+      {/* <InputGroup.Text>Create a Post</InputGroup.Text> */}
     </InputGroup.Prepend>
+    
     <FormControl as="textarea" aria-label="With textarea" handleInputChange = {this.handleInputChange}
-    handleFormSubmit ={this.handleFormSubmit}/>
+    handleFormSubmit ={this.handleFormSubmit} 
+    // value={this.state.postInfo} name="postInfo" placeholder="create your post"
+    />
   </InputGroup>
         {this.state.posts ? (
             this.state.posts.map((singlePost, i) => (
