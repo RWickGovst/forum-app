@@ -7,7 +7,7 @@ import './style.css';
 
 function Feed(props) {
     return (
-        <Card style={{ width: '100%'}}>
+        <Card border="primary" style={{ width: '100%'}}>
   <Card.Img variant="top" {...props.img} />
   <Card.Body>
     <Card.Title>{props.title}</Card.Title>
@@ -15,7 +15,7 @@ function Feed(props) {
       {props.summary}
     </Card.Text>
     {/* eslint-disable-next-line */}
-    <Button variant="link"><a target="_blank" href={props.link}>Check It out</a></Button>
+    <Button variant="link"><a target="_blank" href={props.link}>Link to article</a></Button>
     <InputGroup>
     <InputGroup.Prepend>
       <InputGroup.Text>Comment</InputGroup.Text>

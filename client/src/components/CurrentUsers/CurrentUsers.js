@@ -9,7 +9,7 @@ function CurrentUsers() {
   return (
 
 
-<Card style={{ width: '18rem' }}>
+<Card border="primary" style={{ width: '18rem' }}>
   
   <Card.Body>
     <Card.Title>Current Users</Card.Title>

@@ -18,6 +18,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Image from 'react-bootstrap/Image';
 // import router from '../../routes/api/post';
 
+
 class Home extends Component {
     state = {
         books: [],
@@ -28,6 +29,7 @@ class Home extends Component {
         username: null
     };
     createPost = () => {
+        console.log("inside the create post function")
         API.createPost(this.state.postInfo).then(res=> console.log(res)).catch( (err) => console.log(err))
     }
 
@@ -76,18 +78,20 @@ class Home extends Component {
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Business</Button>
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Technology</Button>
     <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Politics</Button>
+    <Button variant="primary" size="lg" onClick={() => this.scrapeCategory()}>Add a Topic</Button>
     
     </Col>
     {/* <Col xs={2}><TopicMenu scrape={(category) => this.scrapeCategory}/></Col> */}
     <Col xs={6}>
-    {/* <Button variant="primary" size="lg" onClick={() => this.createPost()}>Create a Post</Button> */}
+    
     <InputGroup>
     
     <InputGroup.Prepend>
     <Col xs={6} md={4}>
       <Image src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgplaceholder.com%2F350x225%2Fff7f7f%2F333333%2Ffa-image&imgrefurl=https%3A%2F%2Florem-ipsum-generator.com%2Fimages&docid=-sb2qfQxLFTVCM&tbnid=hFCoOZRpkw4qDM%3A&vet=10ahUKEwiRxqec0YDkAhX-Ap0JHe1DA0cQMwiHASgFMAU..i&w=350&h=225&bih=694&biw=1517&q=image%20placeholder&ved=0ahUKEwiRxqec0YDkAhX-Ap0JHe1DA0cQMwiHASgFMAU&iact=mrc&uact=8" roundedCircle />
     </Col>
-      <InputGroup.Text>Create a Post</InputGroup.Text>
+    <Button variant="primary" size="lg" onClick={() => this.createPost()}>Create a Post</Button>
+      {/* <InputGroup.Text>Create a Post</InputGroup.Text> */}
     </InputGroup.Prepend>
     <FormControl as="textarea" aria-label="With textarea" handleinputchange = {this.handleInputChange}
     handleFormSubmit ={this.handleformsubmit}/>

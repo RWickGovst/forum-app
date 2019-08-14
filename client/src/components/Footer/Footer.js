@@ -5,7 +5,7 @@ import './style.css';
 function Footer() {
     return (
       <div className="container">
-        <Card bg="dark" text="white" sticky="bottom">
+        <Card bg="light" text="black" sticky="bottom">
   <Card.Header>Quote</Card.Header>
   <Card.Body>
     <blockquote className="blockquote mb-0">

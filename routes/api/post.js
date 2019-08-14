@@ -1,12 +1,12 @@
 // dependencies
 const router = require('express').Router();
-const postControllers = require("../../controllers/postController");
+// const postControllers = require("../../controllers/postController");
 
 // file imports
-const postController = require('../../controllers/postController');
+const postControllers = require('../../controllers/postController');
 
 router.route('/technology')
-    .get(postController.newTechnology);
+    .get(postControllers.newTechnology);
 router.route("/")
 .post(postControllers.createPost);
 
