@@ -88,7 +88,7 @@ class Home extends Component {
     
     <InputGroup.Prepend>
     <Col xs={6} md={4}>
-      <Image src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgplaceholder.com%2F350x225%2Fff7f7f%2F333333%2Ffa-image&imgrefurl=https%3A%2F%2Florem-ipsum-generator.com%2Fimages&docid=-sb2qfQxLFTVCM&tbnid=hFCoOZRpkw4qDM%3A&vet=10ahUKEwiRxqec0YDkAhX-Ap0JHe1DA0cQMwiHASgFMAU..i&w=350&h=225&bih=694&biw=1517&q=image%20placeholder&ved=0ahUKEwiRxqec0YDkAhX-Ap0JHe1DA0cQMwiHASgFMAU&iact=mrc&uact=8" roundedCircle />
+      <Image src="/favicon.ico" roundedCircle />
     </Col>
     <Button variant="primary" size="lg" onClick={() => this.createPost()}>Create a Post</Button>
       {/* <InputGroup.Text>Create a Post</InputGroup.Text> */}
