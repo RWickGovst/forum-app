@@ -24,7 +24,9 @@ class Home extends Component {
         books: [],
         posts: [],
         message: '',
-        postInfo: ""
+        postInfo: "",
+        loggedIn: false,
+        username: null
     };
     createPost = () => {
         console.log("inside the create post function")
@@ -35,7 +37,7 @@ class Home extends Component {
     componentDidMount = () => {
        
         this.setState({
-            message: 'Component Loaded'
+            message: 'Component Loaded',
         });
     };
 
@@ -86,16 +88,13 @@ class Home extends Component {
     
     <InputGroup.Prepend>
     <Col xs={6} md={4}>
-      <Image src="./favicon.ico" roundedCircle />
+      <Image src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimgplaceholder.com%2F350x225%2Fff7f7f%2F333333%2Ffa-image&imgrefurl=https%3A%2F%2Florem-ipsum-generator.com%2Fimages&docid=-sb2qfQxLFTVCM&tbnid=hFCoOZRpkw4qDM%3A&vet=10ahUKEwiRxqec0YDkAhX-Ap0JHe1DA0cQMwiHASgFMAU..i&w=350&h=225&bih=694&biw=1517&q=image%20placeholder&ved=0ahUKEwiRxqec0YDkAhX-Ap0JHe1DA0cQMwiHASgFMAU&iact=mrc&uact=8" roundedCircle />
     </Col>
     <Button variant="primary" size="lg" onClick={() => this.createPost()}>Create a Post</Button>
       {/* <InputGroup.Text>Create a Post</InputGroup.Text> */}
     </InputGroup.Prepend>
-    
-    <FormControl as="textarea" aria-label="With textarea" handleInputChange = {this.handleInputChange}
-    handleFormSubmit ={this.handleFormSubmit} 
-    // value={this.state.postInfo} name="postInfo" placeholder="create your post"
-    />
+    <FormControl as="textarea" aria-label="With textarea" handleinputchange = {this.handleInputChange}
+    handleFormSubmit ={this.handleformsubmit}/>
   </InputGroup>
         {this.state.posts ? (
             this.state.posts.map((singlePost, i) => (
